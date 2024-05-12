@@ -1,0 +1,1 @@
+just create a hosts file with labels (starting with '%') and the same format as the 'hosts' file attached. You can execute a command against each collection of machines in parallel using mpssh by specifying the label without the '%'. 
