@@ -8,7 +8,7 @@ providing 'arch' as argument.
 
 USAGE:
 
-update.servers.sh [-h | --help] | [deb | arch | reboot]
+update.servers.sh [-h | --help | deb | arch | reboot]
 
 EXAMPLES:
 
