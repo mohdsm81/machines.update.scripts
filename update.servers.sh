@@ -63,6 +63,12 @@ get_opts_and_do(){
 
     if [ $narg -eq 0 ]; then
         # update all machines if no arguments
+        echo "
+        ===========================
+        | updating ALL servers   |
+        ===========================
+        "
+        #
         update_deb
         update_arch
         exit 0
@@ -76,7 +82,7 @@ get_opts_and_do(){
         deb)
             echo "
             ===========================
-            | updating deb servers   |
+            | updating DEB servers   |
             ===========================
             "
             update_deb
@@ -84,7 +90,7 @@ get_opts_and_do(){
         arch)
             echo "
             ===========================
-            | updating arch servers   |
+            | updating ARCH servers   |
             ===========================
             "
             update_arch
