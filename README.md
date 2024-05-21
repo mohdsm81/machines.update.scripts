@@ -36,4 +36,6 @@ edit the <code>.mpssh/*</code> hosts files to your heart desires.
 
 The lines that start with '%' are the grouping/labels of the following lines of ssh machines to execute a command against.
 
-note that these scripts use the <a href="https://github.com/ndenev/mpssh">mpssh</a> command
+note that these scripts use the <a href="https://github.com/ndenev/mpssh">mpssh</a> command, that needs to be installed only on your pilot machine.
+
+You, obviously, need your pilot machine's public ssh key/file on the target hosts (those listed in .mpssh/* files). 
