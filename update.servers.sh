@@ -41,40 +41,50 @@ update_arch(){
 
 get_opts_and_do(){
 
-    if [ $# -gt 1 ]; then
+    # DEBUG
+    # echo "num args: "
+    # echo $1
+
+    # echo "first arg: "
+    # echo $2
+
+    narg=$1
+    arg=$2
+
+    if [ $narg -gt 1 ]; then
         echo "provide at most one argument (-h, --help, deb, arch, or reboot) or
         call the scripts without arguments to update all servieces/servers."
-        exit
-    fi;
+        exit 1
+    fi
 
-    if [ $# -eq 0 ]; then
+    if [ $narg -eq 0 ]; then
         # update all machines if no arguments
         update_deb
         update_arch
-        exit
-    fi;
+        exit 0
+    fi
 
-    arg=#1
+
     case $arg in
         -h|--help)
             usage
-            break
         ;;
         deb)
             update_deb
-            break
         ;;
         arch)
             update_arch
-            break
         ;;
         reboot)
             /usr/bin/reboot
-            break
         ;;
-    esac;
+        *)
+            usage
+        ;;
+    esac
 
-    exit
+    exit 0
 }
 
-get_opts_and_do
+# passing number of args, and the first arg
+get_opts_and_do "$#" "$1"
