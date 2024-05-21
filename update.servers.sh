@@ -74,12 +74,27 @@ get_opts_and_do(){
             usage
         ;;
         deb)
+            echo "
+            ===========================
+            | updating deb servers   |
+            ===========================
+            "
             update_deb
         ;;
         arch)
+            echo "
+            ===========================
+            | updating arch servers   |
+            ===========================
+            "
             update_arch
         ;;
         reboot)
+            echo "
+            ===========================
+            | rebooting all services  |
+            ===========================
+            "
             reboot_services
         ;;
         *)
