@@ -6,7 +6,12 @@ root@llvm.l:22
 root@passwords.l:22
 root@sync.l:22
 %deb
-root@nas.l:22
 root@proxy.l:22
 root@pihole.l:22
 root@matrix.l:22
+root@db.l:22
+root@downloads:22
+root@vpn.l:22
+root@web.l:22
+root@ddns.l:22
+root@nas.l:22
