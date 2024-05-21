@@ -39,6 +39,10 @@ update_arch(){
     mpssh -f .mpssh/hosts -l arch 'yay -Syu --noconfirm'
 }
 
+reboot_services(){
+    mpssh -f .mpssh/services 'reboot'
+}
+
 get_opts_and_do(){
 
     # DEBUG
@@ -76,7 +80,7 @@ get_opts_and_do(){
             update_arch
         ;;
         reboot)
-            /usr/bin/reboot
+            reboot_services
         ;;
         *)
             usage
