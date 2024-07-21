@@ -32,15 +32,15 @@ update.servers.sh reboot
 }
 
 update_deb(){
-    mpssh -f .mpssh/hosts -l deb 'apt update && apt upgrade -y'
+    mpssh -f $HOME/.mpssh/hosts -l deb 'apt update && apt upgrade -y'
 }
 
 update_arch(){
-    mpssh -f .mpssh/hosts -l arch 'yay -Syu --noconfirm'
+    mpssh -f $HOME/.mpssh/hosts -l arch 'yay -Syu --noconfirm'
 }
 
 reboot_services(){
-    mpssh -f .mpssh/services 'reboot'
+    mpssh -f $HOME/.mpssh/services 'reboot'
 }
 
 get_opts_and_do(){
