@@ -6,6 +6,7 @@ root@llvm.l:22
 root@passwords.l:22
 root@sync.l:22
 root@jenkins.l:22
+root@mojo.l:22
 %deb
 root@proxy.l:22
 root@pihole.l:22
@@ -14,6 +15,5 @@ root@db.l:22
 root@downloads:22
 root@vpn.l:22
 root@web.l:22
-root@mojo.l:22
 root@git.l:22
 root@wiki.l:22
