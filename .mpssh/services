@@ -7,7 +7,7 @@ root@passwords.l:22
 root@sync.l:22
 root@jenkins.l:22
 root@mojo.l:22
-root@downloads:22
+root@data.l:22
 %deb
 root@proxy.l:22
 root@pihole.l:22
