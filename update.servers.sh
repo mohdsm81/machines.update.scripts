@@ -43,6 +43,11 @@ reboot_services(){
     mpssh -f $HOME/.mpssh/services 'reboot'
 }
 
+clean_them(){
+    mpssh -f $HOME/.mpssh/hosts -l deb 'apt clean -y';
+    mpssh -f $HOME/.mpssh/hosts -l arch 'yay -Sccc --noconfirm';
+}
+
 get_opts_and_do(){
 
     # DEBUG
@@ -78,6 +83,14 @@ get_opts_and_do(){
     case $arg in
         -h|--help)
             usage
+        ;;
+        clean)
+            echo "
+            ===========================
+            | cleaning all hosts      |
+            ===========================
+            "
+            clean_them
         ;;
         deb)
             echo "
